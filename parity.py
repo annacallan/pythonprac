@@ -3,13 +3,35 @@
 # given a 5x5 grid, add the last column and row, then flip the card at the
 # coordinate specified by the user
 
-five_by_five_grid = [
+grid = [
     ['X','0','X','X','X'],
     ['X','X','0','0','0'],
     ['X','0','X','0','X'],
     ['0','X','X','X','X'],
     ['X','0','0','X','X'],
 ]
+
+for row in grid:
+    xcounter_row = 0
+    for item in row:
+        if item == 'X':
+            xcounter_row += 1
+
+    if xcounter_row %2 ==0:
+        row.append('0')
+    else:
+        row.append('X') 
+
+print(grid)
+
+for y in range(6):
+    for x in range(5):
+        print(grid[x][y])
+    print("\n")
+
+
+
+
 
 # first step is to add colum 6 and row 6
 
