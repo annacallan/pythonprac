@@ -16,7 +16,7 @@ backpack.append('pythons')
 
 backpack[0] = 'lunchbox'
 
-name = 'hayley'
+# name = 'hayley'
 # print(name[0])
 # name[0] = 'c' # doesn't work
 # print(name)

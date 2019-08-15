@@ -22,16 +22,36 @@ for row in grid:
     else:
         row.append('X') 
 
-print(grid)
 
-for y in range(6):
-    for x in range(5):
-        print(grid[x][y])
-    print("\n")
+maxCol = len(grid[0])
+maxRow = len(grid)
+new_row =[]
 
+for y in range(maxCol):
+    x_count = 0
+    for x in range(maxRow):
+        if grid[x][y] == 'X':
+            x_count += 1
+    if x_count %2 ==0:
+               new_row.append('0')
+    else:
+            new_row.append('X') 
+       
+#print(new_row)
 
+grid.append(new_row)
 
+# print(grid)
+        
+counter = 0
+for list in grid:
+    print(list)
+    counter += 1
 
+coordinates =input ('enter coordinates of card to flip in form "(x , y)" ')
+
+#Now need to test whether input is valid and give error messages accordingly.
+#Then need to flip the card at appropriate coordinates and then print grid again.
 
 # first step is to add colum 6 and row 6
 
