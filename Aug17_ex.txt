@@ -1,4 +1,0 @@
-
-dict= {0: 'chloe', 1: 'Maddy', 2: 'Nanwen', 3: 'Marc'}
-
-dict
