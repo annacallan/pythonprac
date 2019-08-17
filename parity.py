@@ -3,6 +3,15 @@
 # given a 5x5 grid, add the last column and row, then flip the card at the
 # coordinate specified by the user
 
+# first step is to add colum 6 and row 6
+
+# output the grid to the user
+# ask the user for the coordinate of the card to flip
+# e.g. input could be: (0,2)
+
+# output the grid with the flipped card
+
+
 grid = [
     ['X','0','X','X','X'],
     ['X','X','0','0','0'],
@@ -24,13 +33,13 @@ for row in grid:
         row.append('X') 
 
 
-maxCol = len(grid[0])
-maxRow = len(grid)
+max_col = len(grid[0])
+max_row = len(grid)
 new_row =[]
 
-for y in range(maxCol):
+for y in range(max_col):
     x_count = 0
-    for x in range(maxRow):
+    for x in range(max_row):
         if grid[x][y] == 'X':
             x_count += 1
     if x_count %2 ==0:
@@ -42,7 +51,7 @@ for y in range(maxCol):
 
 grid.append(new_row)
 
-# print(grid)
+#print(grid)
  
 def print_grid():
     counter = 0
@@ -96,17 +105,6 @@ card_flip(x, y)
 print_grid()
 
 
-
-# first step is to add colum 6 and row 6
-
-# output the grid to the user
-# ask the user for the coordinate of the card to flip
-# e.g. input could be: (0,2)
-
-# output the grid with the flipped card
-
-
-
 ## TASK 2
 
 # given a six by six grid, work out what card was flipped
@@ -114,16 +112,31 @@ print_grid()
 # your program should output the coordinate of the flipped card
 # in this case it would be: (x,y)
 
-# OR do I want to unpack eack list and examine individually?
+grid1 = [
+    ['0','X','0','X','X'],
+    ['X','X','X','0','0'],
+    ['X','0','0','0','X'],
+    ['0','X','X','0','X'],
+    ['X','0','X','X','X'],
+]
 
-# def compare_lists(grid1, grid2):
-#     # Let's initialize our index to the first element
-#     # in any list: element #0.
-#     item = 0
+grid2 = [
+    ['0','X','0','X','X'],
+    ['X','X','X','0','0'],
+    ['X','0','X','0','X'],
+    ['0','X','X','0','X'],
+    ['X','0','X','X','X'],
+]
 
-#     while item < len(grid1) and item < len(grid2):
-#         if grid1[item] != grid2[item]:
-#             # If any two elements are not equal, say so.
-#             return False
+max_col = len(grid1[0])
+max_row = len(grid1)
 
-#     return True
+for y in range(max_col):
+    x_count = 0
+    for x in range(max_row):
+        if grid1[x][y] != grid2[x][y]:
+            print((x, y))
+        else:
+            continue
+
+
